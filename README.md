@@ -1,126 +1,153 @@
-# CatchIt
+# RE:CLAIM – Campus Lost and Found
 
-CatchIt is a PHP and MySQL campus lost-and-found application. Students can report lost or found belongings, search approved listings, and submit claims. Administrators can manage listings, accounts, and claims.
+**RE:CLAIM** is a web-based Campus Lost and Found Management System designed to help students and college staff report, search, and recover lost belongings within a campus.
 
-## Features
+The system provides a simple platform where users can report lost or found items, search for items, submit claims, and communicate with administrators.
 
-- Student registration, sign-in, and profile management
-- Lost and found item reports, including optional photos
-- Search and browse listings by item, category, and location
-- Claim workflow for found items
-- Admin tools for managing items, users, and claims
-- Public Help and Feedback pages with saved ratings and comments
-- Responsive interface with light and dark themes
+## 🚀 Features
 
-## Requirements
+- **User Registration & Login:** Secure user authentication.
+- **Report Lost Items:** Users can report items they have lost.
+- **Report Found Items:** Users can submit details about found belongings.
+- **Browse & Search Items:** Search and browse available lost and found items.
+- **Category Management:** Organize items into different categories.
+- **Claim Management:** Users can submit claims for items they believe belong to them.
+- **Admin Dashboard:** Administrators can manage users, items, claims, and feedback.
+- **Feedback System:** Users can share feedback.
+- **Email Notifications:** Email notifications for supported system activities.
+- **Password Reset:** Password recovery functionality.
 
-- XAMPP, or another local stack with Apache, PHP 7.4+ and MySQL/MariaDB
-- PHP `mysqli` support (and `mysqlnd` for `mysqli_stmt_get_result`)
-- A modern browser
+## 🛠️ Technologies Used
 
-Composer is used for PHPMailer SMTP delivery. The Inter font is loaded from Google Fonts when an internet connection is available; the site falls back to sans-serif fonts otherwise.
+| Technology | Purpose |
+|---|---|
+| HTML5 | Page structure |
+| CSS3 | Styling and layout |
+| JavaScript | Client-side interactions |
+| PHP | Backend development |
+| MySQL | Database management |
+| Bootstrap / Custom CSS | User interface styling |
+| PHPMailer | Email functionality |
+| XAMPP | Local development environment |
 
-## Run locally with XAMPP
-
-1. Place the project folder inside XAMPP's `htdocs` directory. For example:
-
-   ```text
-   C:\xampp\htdocs\Campus-Lost-And-Found
-   ```
-
-   If your checkout has an additional nested `Campus-Lost-And-Found` folder, use that inner folder as the project root.
-
-2. Start **Apache** and **MySQL** from the XAMPP Control Panel.
-
-3. Open phpMyAdmin at `http://localhost/phpmyadmin`, select **Import**, choose `database/campus_lost_found.sql`, and run the import. The SQL file creates the `campus_lost_found` database, its tables (including feedback and password-reset storage), and the initial item categories. For existing installations, select the database and import `database/add_password_resets.sql` and `database/add_feedback.sql` to add the corresponding tables.
-
-4. Install the PHP dependency from the project directory:
-
-   ```text
-   composer install
-   ```
-
-5. Check `config/database.php`. The default local settings are:
-
-   ```php
-   $host = "127.0.0.1";
-   $username = "root";
-   $password = "";
-   $database = "campus_lost_found";
-   $port = 3306;
-   ```
-
-   Update these values if your MySQL credentials or port are different. The Help page contains fictional sample contact details; replace them with verified campus contacts before publishing.
-
-6. Configure SMTP and app settings in the environment of the Apache/PHP process. Do not put SMTP secrets in frontend files or commit them to the project:
-
-   | Variable | Purpose |
-   | --- | --- |
-   | `SMTP_HOST` | SMTP server hostname |
-   | `SMTP_PORT` | SMTP port (commonly `587` for TLS or `465` for SSL) |
-   | `SMTP_USERNAME` | SMTP account; optional only if the server does not require authentication |
-   | `SMTP_PASSWORD` | SMTP password; optional only if the server does not require authentication |
-   | `SMTP_ENCRYPTION` | `tls` (default) or `ssl`; `none` is limited to non-production environments |
-   | `SMTP_FROM_EMAIL` | Verified sender email address |
-   | `SMTP_FROM_NAME` | Optional sender display name (defaults to `CatchIt`) |
-   | `CATCHIT_ADMIN_EMAIL` | Admin address that receives new report notifications |
-   | `CATCHIT_APP_KEY` | Long random secret used to hash reset-request rate-limit identifiers |
-   | `APP_BASE_URL` | Public base URL of this app, without a trailing slash |
-   | `CATCHIT_ENV` | Set to `production` to require an explicitly configured HTTPS `APP_BASE_URL` |
-
-   In production, set `APP_BASE_URL` to the canonical `https://` site URL. Keep secrets in server environment settings or a protected configuration outside the public web root. Restart Apache after changing its environment. SMTP delivery failures are logged to the PHP error log; report pages explicitly indicate when a notification could not be delivered. A reset-request page never confirms that a message was sent or whether an account exists.
-
-7. Open the site in your browser. For the current nested XAMPP checkout, the URL is:
-
-   ```text
-   http://localhost/Campus-Lost-And-Found/Campus-Lost-And-Found/
-   ```
-
-   If you placed the project directly in `htdocs/Campus-Lost-And-Found`, use `http://localhost/Campus-Lost-And-Found/` instead.
-
-8. To verify the database connection, open:
-
-   ```text
-   http://localhost/Campus-Lost-And-Found/Campus-Lost-And-Found/test_database.php
-   ```
-
-   A successful check reports the connected database and item count.
-
-## Create an administrator account
-
-Registration creates student accounts. For a local development database, register an account, then use phpMyAdmin's SQL tab to grant it the admin role:
-
-```sql
-UPDATE users
-SET role = 'admin'
-WHERE email = 'admin@example.com';
-```
-
-Replace the email with the address used during registration. Do not expose a self-service admin role change in a public deployment.
-
-## Project layout
+## 📂 Project Structure
 
 ```text
-admin/       Admin dashboard and management pages
-config/      Database connection settings
-css/         Shared styles and themes
-database/    Database schema and starter categories
-includes/    Shared navigation, layout, helpers, and auth checks
-js/          Theme and interface interactions
-student/     Student dashboard, reports, search, claims, and profile
-uploads/     Uploaded item images
-index.php    Public listing page
-help.php     Public Help and sample contact information
-feedback.php Public feedback form
-login.php    Sign-in
-forgot_password.php Password reset requests
-reset_password.php Token-based password reset
-register.php Account registration
-composer.json PHPMailer dependency
+RE-CLAIM/
+│
+├── admin/
+├── assets/
+├── config/
+├── css/
+├── database/
+│   └── campus_lost_found.sql
+├── images/
+├── includes/
+├── js/
+├── uploads/
+│
+├── index.php
+├── login.php
+├── register.php
+├── dashboard.php
+├── feedback.php
+├── search.php
+├── README.md
+└── .gitignore
 ```
 
-## Notes
+*Note: The structure above is illustrative. Your actual project may contain additional files and folders.*
 
-- Uploaded item images are stored under `uploads/items/`. Ensure this directory is writable by the web server when using item photo uploads.
-- `test_connection.php` and `test_database.php` are diagnostic pages intended for local development. Remove or restrict them before deploying publicly.
-- The database credentials shown above are suitable only for a default local XAMPP setup. Configure secure credentials and server settings before any production deployment.
+## ⚙️ Installation & Setup
+
+Follow these steps to run RE:CLAIM on your local computer.
+
+### 1. Install Required Software
+
+- XAMPP
+- Visual Studio Code
+- Web Browser
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/RE-CLAIM.git
+```
+
+### 3. Move the Project
+
+Place the project folder inside the XAMPP `htdocs` directory.
+
+```text
+C:/xampp/htdocs/RE-CLAIM/
+```
+
+### 4. Create the Database
+
+1. Start Apache and MySQL from XAMPP.
+2. Open phpMyAdmin.
+3. Create a database named `campus_lost_found`.
+4. Import `database/campus_lost_found.sql`.
+
+### 5. Configure Database Connection
+
+Create your local `config/database.php` file using the example configuration file.
+
+Update the database host, username, password, database name, and port according to your MySQL setup.
+
+### 6. Configure Email Settings
+
+Set up your SMTP credentials in your local `config/mail.php` file.
+
+**Important:** Never upload real database passwords, SMTP credentials, or other sensitive information to GitHub.
+
+### 7. Run the Project
+
+Open your browser and visit:
+
+```text
+http://localhost/RE-CLAIM/
+```
+
+## 🗄️ Database Tables
+
+The project uses MySQL with the following tables:
+
+- `users` – Stores user information.
+- `categories` – Stores item categories.
+- `items` – Stores lost and found item details.
+- `claims` – Stores item claim requests.
+- `feedback` – Stores user feedback.
+- `password_resets` – Manages password reset requests.
+
+## 🔐 Security
+
+- Password hashing for user passwords.
+- Input validation and sanitization.
+- Prepared statements for database operations.
+- Protected configuration files.
+- SMTP credentials stored separately from public source code.
+
+## 🎯 Project Objective
+
+The main objective of RE:CLAIM is to make the lost and found process easier, faster, and more organized within a college campus.
+
+It reduces the difficulty of finding lost belongings and provides a centralized platform for students and administrators.
+
+## 🔮 Future Improvements
+
+- Real-time notifications.
+- Image-based item search.
+- QR code-based item identification.
+- Improved mobile responsiveness.
+- Advanced search and filtering.
+
+## 👨‍💻 Developer
+
+**RE:CLAIM – Campus Lost and Found**
+
+Developed as an academic project using PHP and MySQL.
+
+## 📄 License
+
+This project is developed for educational purposes.
