@@ -1,3 +1,4 @@
+
 .navbar {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -9,6 +10,84 @@
 .navbar .logo {
     width: auto !important;
     text-align: left !important;
+}
+
+/* =====================================
+   BACK BUTTON - ARROW ONLY
+===================================== */
+
+.navbar-brand-group .header-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    color: #1e293b !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    text-decoration: none;
+    transition: color 180ms ease, transform 180ms ease;
+}
+
+.navbar-brand-group .header-back svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Light Mode */
+html[data-theme="light"] .navbar-brand-group .header-back {
+    color: #1e293b !important;
+}
+
+/* Dark Mode */
+html[data-theme="dark"] .navbar-brand-group .header-back {
+    color: #ffffff !important;
+}
+
+/* Hover - Light Mode */
+html[data-theme="light"] .navbar-brand-group .header-back:hover {
+    color: #2563eb !important;
+    background: transparent !important;
+    transform: translateX(-3px);
+}
+
+/* Hover - Dark Mode */
+html[data-theme="dark"] .navbar-brand-group .header-back:hover {
+    color: #60a5fa !important;
+    background: transparent !important;
+    transform: translateX(-3px);
+}
+
+/* Keyboard Focus */
+.navbar-brand-group .header-back:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+/* Small Screens */
+@media (max-width: 600px) {
+    .navbar-brand-group .header-back {
+        width: 38px;
+        height: 38px;
+    }
+
+    .navbar-brand-group .header-back svg {
+        width: 22px;
+        height: 22px;
+    }
 }
 
 .navbar-controls {
