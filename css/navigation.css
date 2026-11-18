@@ -24,13 +24,11 @@
     width: 42px;
     height: 42px;
     padding: 0;
-
     color: #1e293b !important;
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-
     text-decoration: none;
     transition: color 180ms ease, transform 180ms ease;
 }
@@ -39,7 +37,6 @@
     display: block;
     width: 24px;
     height: 24px;
-
     fill: none !important;
     stroke: currentColor !important;
     stroke-width: 2.2;
@@ -47,37 +44,31 @@
     stroke-linejoin: round;
 }
 
-/* Light Mode */
 html[data-theme="light"] .navbar-brand-group .header-back {
     color: #1e293b !important;
 }
 
-/* Dark Mode */
 html[data-theme="dark"] .navbar-brand-group .header-back {
     color: #ffffff !important;
 }
 
-/* Hover - Light Mode */
 html[data-theme="light"] .navbar-brand-group .header-back:hover {
     color: #2563eb !important;
     background: transparent !important;
     transform: translateX(-3px);
 }
 
-/* Hover - Dark Mode */
 html[data-theme="dark"] .navbar-brand-group .header-back:hover {
     color: #60a5fa !important;
     background: transparent !important;
     transform: translateX(-3px);
 }
 
-/* Keyboard Focus */
 .navbar-brand-group .header-back:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 4px;
 }
 
-/* Small Screens */
 @media (max-width: 600px) {
     .navbar-brand-group .header-back {
         width: 38px;
@@ -89,6 +80,10 @@ html[data-theme="dark"] .navbar-brand-group .header-back:hover {
         height: 22px;
     }
 }
+
+/* =====================================
+   NAVBAR CONTROLS
+===================================== */
 
 .navbar-controls {
     display: flex;
@@ -135,6 +130,10 @@ html[data-theme="light"] .navbar-controls > .theme-toggle:hover,
 html[data-theme="light"] .navbar-controls > .theme-toggle:focus-visible {
     background: rgba(102, 102, 255, 0.2);
 }
+
+/* =====================================
+   HAMBURGER MENU
+===================================== */
 
 .navbar-menu {
     position: relative;
@@ -200,6 +199,10 @@ html[data-theme="dark"] .navbar-menu .menu-toggle {
     transform: translateY(-6px) rotate(-45deg);
 }
 
+/* =====================================
+   DROPDOWN PANEL
+===================================== */
+
 .menu-panel {
     position: absolute;
     z-index: 1100;
@@ -225,6 +228,10 @@ html[data-theme="light"] .menu-panel {
     background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 22px 58px rgba(30, 34, 73, 0.16), 0 0 24px rgba(102, 102, 255, 0.1);
 }
+
+/* =====================================
+   NAV LINKS
+===================================== */
 
 .navbar-menu .nav-links {
     display: grid !important;
@@ -265,7 +272,7 @@ html[data-theme="light"] .menu-panel {
     font-weight: 650 !important;
     text-decoration: none !important;
     transform: none !important;
-    transition: background 160ms ease, border-color 160ms ease, color 160ms ease !important;
+    transition: background 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease !important;
 }
 
 html[data-theme="light"] .navbar-menu .nav-links a,
@@ -274,53 +281,116 @@ html[data-theme="light"] .navbar-menu .nav-links a[aria-current="page"] {
     color: #282742 !important;
 }
 
-.navbar-menu .nav-links a:hover,
-.navbar-menu .nav-links a:focus-visible,
-.navbar-menu .nav-links a.is-active,
-.navbar-menu .nav-links a[aria-current="page"] {
-    border-color: rgba(184, 186, 255, 0.24) !important;
-    background: rgba(102, 102, 255, 0.16) !important;
-    color: #fff !important;
-}
-
-html[data-theme="light"] .navbar-menu .nav-links a:hover,
-html[data-theme="light"] .navbar-menu .nav-links a:focus-visible,
-html[data-theme="light"] .navbar-menu .nav-links a.is-active,
-html[data-theme="light"] .navbar-menu .nav-links a[aria-current="page"] {
-    border-color: rgba(102, 102, 255, 0.2) !important;
-    background: rgba(102, 102, 255, 0.1) !important;
-    color: #252545 !important;
-}
+/* =====================================
+   NAVBAR ACTIONS - AUTH BOXES
+===================================== */
 
 .navbar-menu .navbar-actions {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr);
     justify-content: stretch !important;
-    gap: 6px !important;
+    gap: 8px !important;
     margin-top: 8px;
-    padding-top: 9px;
+    padding-top: 10px;
     border-top: 1px solid rgba(184, 186, 255, 0.18);
 }
 
 .navbar-menu .navbar-actions .auth-action,
 .navbar-menu .navbar-actions .profile-action {
+    display: flex !important;
     width: 100%;
     min-width: 0;
+    min-height: 40px;
     grid-column: 1;
+    align-items: center;
     justify-content: center !important;
     text-align: center;
-    padding: 8px 10px !important;
+    box-sizing: border-box;
+    padding: 9px 12px !important;
+    border: 1px solid rgba(96, 165, 250, 0.38) !important;
+    border-radius: 10px !important;
+    background: rgba(59, 130, 246, 0.07) !important;
+    color: #e7e8ff !important;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08) !important;
+    font-size: 0.9rem;
+    font-weight: 650;
+    text-decoration: none !important;
+    transform: none !important;
+    transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease !important;
 }
 
-.navbar-menu .navbar-actions .auth-action.sign-in,
-.navbar-menu .navbar-actions .auth-action.create-account,
-.navbar-menu .navbar-actions .auth-action.sign-out {
-    min-height: 36px !important;
+/* Dark Mode - Normal Auth Boxes */
+
+html[data-theme="dark"] .navbar-menu .navbar-actions .auth-action,
+html[data-theme="dark"] .navbar-menu .navbar-actions .profile-action {
+    background: rgba(59, 130, 246, 0.08) !important;
+    border-color: rgba(96, 165, 250, 0.4) !important;
+    color: #e7e8ff !important;
 }
 
-.navbar-menu .navbar-actions .profile-action {
-    justify-content: center !important;
+/* Light Mode - Normal Auth Boxes */
+
+html[data-theme="light"] .navbar-menu .navbar-actions .auth-action,
+html[data-theme="light"] .navbar-menu .navbar-actions .profile-action {
+    background: rgba(59, 130, 246, 0.06) !important;
+    border-color: rgba(37, 99, 235, 0.35) !important;
+    color: #282742 !important;
 }
+
+/* =====================================
+   UNIFIED BLUE HOVER + GLOW
+   NAV LINKS + SIGN IN + CREATE ACCOUNT
+===================================== */
+
+/* Dark Mode Hover */
+
+html[data-theme="dark"] .navbar-menu .menu-panel .nav-links a:hover,
+html[data-theme="dark"] .navbar-menu .menu-panel .nav-links a:focus-visible,
+html[data-theme="dark"] .navbar-menu .menu-panel .navbar-actions .auth-action:hover,
+html[data-theme="dark"] .navbar-menu .menu-panel .navbar-actions .auth-action:focus-visible,
+html[data-theme="dark"] .navbar-menu .menu-panel .navbar-actions .profile-action:hover,
+html[data-theme="dark"] .navbar-menu .menu-panel .navbar-actions .profile-action:focus-visible {
+
+    background: rgba(59, 130, 246, 0.22) !important;
+    border: 1px solid rgba(96, 165, 250, 0.75) !important;
+    color: #ffffff !important;
+
+    box-shadow:
+        0 0 8px rgba(59, 130, 246, 0.45),
+        0 0 18px rgba(59, 130, 246, 0.30),
+        0 0 28px rgba(59, 130, 246, 0.18) !important;
+
+    transform: none !important;
+}
+
+/* Light Mode Hover */
+
+html[data-theme="light"] .navbar-menu .menu-panel .nav-links a:hover,
+html[data-theme="light"] .navbar-menu .menu-panel .nav-links a:focus-visible,
+html[data-theme="light"] .navbar-menu .menu-panel .navbar-actions .auth-action:hover,
+html[data-theme="light"] .navbar-menu .menu-panel .navbar-actions .auth-action:focus-visible,
+html[data-theme="light"] .navbar-menu .menu-panel .navbar-actions .profile-action:hover,
+html[data-theme="light"] .navbar-menu .menu-panel .navbar-actions .profile-action:focus-visible {
+
+    background: rgba(59, 130, 246, 0.13) !important;
+    border: 1px solid rgba(37, 99, 235, 0.65) !important;
+    color: #1d4ed8 !important;
+
+    box-shadow:
+        0 0 8px rgba(59, 130, 246, 0.32),
+        0 0 18px rgba(59, 130, 246, 0.23),
+        0 0 28px rgba(59, 130, 246, 0.14) !important;
+
+    transform: none !important;
+}
+
+/* =====================================
+   DROPDOWN ANIMATION
+===================================== */
 
 @keyframes navigation-menu-in {
     from {
@@ -333,6 +403,10 @@ html[data-theme="light"] .navbar-menu .nav-links a[aria-current="page"] {
     }
 }
 
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
 @media (max-width: 620px) {
     .navbar {
         padding: 12px !important;
@@ -342,6 +416,10 @@ html[data-theme="light"] .navbar-menu .nav-links a[aria-current="page"] {
         top: calc(100% + 10px);
     }
 }
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
 
 @media (prefers-reduced-motion: reduce) {
     .navbar-menu *,
