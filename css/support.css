@@ -385,7 +385,7 @@
 }
 
 .faq-item[open] summary::after {
-    content: "−";
+    content: "âˆ’";
 }
 
 .faq-item p {
@@ -2354,3 +2354,10 @@ body.dark-mode .feedback-page .feedback-submit-button,
         animation: none;
     }
 }
+/* Feedback: single spinner + centered compact success dialog */
+.feedback-page .feedback-submit-button.is-loading::after { display: none !important; content: none !important; }
+dialog.feedback-dialog[open] { position: fixed; inset: 0; margin: auto; width: min(340px, calc(100% - 32px)); height: fit-content; max-height: calc(100vh - 32px); padding: 24px 22px; border-radius: 18px; }
+.feedback-dialog .dialog-check { width: 48px; height: 48px; margin-bottom: 12px; font-size: 25px; }
+.feedback-dialog h2 { font-size: 20px; margin-bottom: 8px; }
+.feedback-dialog p:not(.dialog-kicker) { font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
+.feedback-dialog .support-button { min-width: 100px; padding: 9px 20px; }
