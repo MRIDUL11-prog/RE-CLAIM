@@ -1,0 +1,2356 @@
+
+/* =========================================
+   RE:CLAIM - PREMIUM HELP & SUPPORT PAGE
+   LIGHT MODE + DARK MODE + GLOW EFFECT
+========================================= */
+
+
+/* =========================================
+   1. LIGHT MODE BASE
+========================================= */
+
+.support-page-body {
+    background:
+        radial-gradient(ellipse at 5% 5%, rgba(104, 126, 255, 0.10), transparent 35%),
+        radial-gradient(ellipse at 95% 35%, rgba(185, 130, 255, 0.09), transparent 35%),
+        #f5f7ff;
+    color: #172b4d;
+    transition: background 0.35s ease, color 0.35s ease;
+}
+
+.support-main {
+    width: min(1160px, 92%);
+    margin: 0 auto;
+    padding: 45px 0 70px;
+}
+
+
+/* =========================================
+   2. HERO SECTION
+========================================= */
+
+.support-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    min-height: 360px;
+    padding: 65px 70px;
+    overflow: hidden;
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(119, 112, 255, 0.42), transparent 30%),
+        radial-gradient(circle at 10% 100%, rgba(35, 145, 255, 0.25), transparent 40%),
+        linear-gradient(125deg, #101c45, #263b83 55%, #493c91);
+    color: #ffffff;
+    border: 1px solid rgba(130, 145, 255, 0.25);
+    box-shadow:
+        0 15px 45px rgba(45, 66, 160, 0.20),
+        0 0 35px rgba(104, 111, 255, 0.16);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.support-eyebrow {
+    margin: 0 0 15px;
+    color: #d5a84e;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.support-hero h1 {
+    margin: 0;
+    max-width: 650px;
+    color: #ffffff;
+    font-size: clamp(34px, 5vw, 53px);
+    line-height: 1.13;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.support-hero h1 span {
+    display: block;
+    color: #ffd77c;
+    text-shadow: 0 0 18px rgba(255, 215, 124, 0.30);
+}
+
+.support-hero p:not(.support-eyebrow) {
+    max-width: 560px;
+    margin: 20px 0 0;
+    color: #d5e0ef;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.support-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 47px;
+    padding: 0 22px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #ffe09a, #f3bd55);
+    color: #172b50;
+    box-shadow: 0 5px 18px rgba(243, 189, 85, 0.25);
+}
+
+.primary-btn:hover {
+    background: #f4d38e;
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 25px rgba(243, 189, 85, 0.45),
+        0 0 18px rgba(255, 215, 124, 0.35);
+}
+
+.secondary-btn {
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(153, 170, 255, 0.25);
+}
+
+
+/* HERO DECORATION */
+
+.hero-decoration {
+    position: relative;
+    flex: 0 0 230px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-icon-circle {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(193, 194, 255, 0.35);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, rgba(151, 147, 255, 0.23), rgba(255, 255, 255, 0.035));
+    box-shadow:
+        0 0 30px rgba(125, 122, 255, 0.22),
+        0 0 65px rgba(125, 122, 255, 0.12),
+        0 0 0 20px rgba(255,255,255,0.035);
+}
+
+.hero-icon-circle span {
+    color: #ffd77c;
+    font-size: 105px;
+    font-weight: 800;
+    text-shadow:
+        0 0 15px rgba(255, 215, 124, 0.65),
+        0 0 35px rgba(255, 215, 124, 0.30);
+}
+
+.hero-small-card {
+    position: absolute;
+    right: -5px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 17px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    background: #ffffff;
+    color: #17365d;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.hero-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #e1f5e9;
+    color: #18854d;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   3. GENERAL SECTION
+========================================= */
+
+.help-section {
+    margin-top: 85px;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.section-intro h2 {
+    margin: 0;
+    color: #172d61;
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    text-shadow: 0 2px 12px rgba(91, 108, 190, 0.08);
+}
+
+.section-intro > p:not(.support-eyebrow) {
+    margin: 13px 0 0;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   4. HOW IT WORKS CARDS
+========================================= */
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 23px;
+}
+
+.help-card {
+    position: relative;
+    padding: 30px 27px;
+    overflow: hidden;
+    border: 1px solid #e3e7fa;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #ffffff, #f8f9ff);
+    box-shadow:
+        0 8px 25px rgba(50, 65, 130, 0.045),
+        0 0 0 1px rgba(255,255,255,0.7) inset;
+    transition: 0.3s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-7px);
+    border-color: #9da8ff;
+    box-shadow:
+        0 15px 35px rgba(73, 82, 180, 0.12),
+        0 0 22px rgba(116, 126, 255, 0.13);
+}
+
+.help-card-number {
+    position: absolute;
+    top: 17px;
+    right: 22px;
+    color: #e9eaff;
+    font-size: 43px;
+    font-weight: 900;
+}
+
+.help-card-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9edff, #f0eaff);
+    color: #5145b8;
+    font-size: 32px;
+    font-weight: 700;
+    box-shadow: 0 5px 16px rgba(102, 91, 205, 0.10);
+}
+
+.help-card h3 {
+    margin: 0 0 12px;
+    color: #20366c;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.help-card p {
+    min-height: 105px;
+    margin: 0;
+    color: #687894;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.help-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 20px;
+    color: #5145bd;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.help-card a:hover {
+    color: #b47a19;
+}
+
+
+/* =========================================
+   5. FAQ SECTION
+========================================= */
+
+.faq-section {
+    padding: 50px;
+    border: 1px solid #e2e6f5;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffffff, #f8f9ff);
+    box-shadow:
+        0 12px 35px rgba(50, 65, 130, 0.055),
+        0 0 25px rgba(125, 126, 255, 0.045);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.faq-item {
+    padding: 20px 23px;
+    border: 1px solid #e5e8f5;
+    border-radius: 11px;
+    background: #fafbff;
+    transition: 0.25s ease;
+}
+
+.faq-item:hover {
+    border-color: #a9afff;
+    box-shadow: 0 0 16px rgba(117, 119, 255, 0.09);
+}
+
+.faq-item[open] {
+    border-color: #9ca5ff;
+    background: #f1f2ff;
+    box-shadow: 0 5px 20px rgba(100, 105, 210, 0.08);
+}
+
+.faq-item summary {
+    position: relative;
+    padding-right: 30px;
+    color: #253b73;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: -5px;
+    color: #7657d8;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    margin: 15px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid #dfe3f4;
+    color: #687894;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   6. CONTACT SECTION
+========================================= */
+
+.contact-panel {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+    align-items: center;
+    margin-top: 85px;
+    padding: 55px;
+    border-radius: 23px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(123, 105, 255, 0.35), transparent 32%),
+        radial-gradient(circle at 5% 100%, rgba(36, 139, 255, 0.22), transparent 35%),
+        linear-gradient(125deg, #101d46, #253c83 60%, #44377e);
+    border: 1px solid rgba(153, 157, 255, 0.25);
+    box-shadow:
+        0 15px 40px rgba(37, 47, 120, 0.20),
+        0 0 35px rgba(111, 103, 255, 0.14);
+}
+
+.contact-copy h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.contact-copy h2 span {
+    display: block;
+    color: #ffd77c;
+    text-shadow: 0 0 18px rgba(255, 215, 124, 0.25);
+}
+
+.contact-copy > p:not(.support-eyebrow) {
+    margin: 18px 0 0;
+    color: #cbd8e9;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.contact-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 27px;
+    color: #e9bf68;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.contact-note span {
+    font-size: 20px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.075);
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.contact-card:hover {
+    transform: translateX(5px);
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(233,191,104,0.5);
+    box-shadow: 0 0 22px rgba(145, 155, 255, 0.18);
+}
+
+.contact-icon {
+    flex: 0 0 45px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffe5a7, #efbd5d);
+    color: #17365d;
+    font-size: 22px;
+    box-shadow: 0 0 16px rgba(255, 204, 105, 0.25);
+}
+
+.contact-details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.contact-details small {
+    color: #bdcce0;
+    font-size: 11px;
+}
+
+.contact-details strong {
+    overflow-wrap: anywhere;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.contact-arrow {
+    color: #e9bf68;
+    font-size: 21px;
+}
+
+
+/* =========================================
+   7. BOTTOM MESSAGE
+========================================= */
+
+.support-bottom {
+    margin-top: 85px;
+    padding: 55px 25px;
+    border: 1px solid #e2e6f5;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff, #f5f5ff);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(50, 65, 130, 0.05);
+}
+
+.bottom-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #fff5df;
+    color: #c18e35;
+    font-size: 25px;
+    box-shadow: 0 0 18px rgba(245, 189, 85, 0.18);
+}
+
+.support-bottom h2 {
+    margin: 0;
+    color: #17365d;
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 800;
+}
+
+.support-bottom p {
+    max-width: 590px;
+    margin: 13px auto 22px;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.support-bottom a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 23px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #263d83, #5145a5);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s ease;
+    box-shadow: 0 5px 18px rgba(70, 69, 165, 0.20);
+}
+
+.support-bottom a:hover {
+    background: #285786;
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 25px rgba(91, 85, 205, 0.35),
+        0 0 18px rgba(116, 126, 255, 0.20);
+}
+
+
+/* =========================================
+   8. FEEDBACK LINK
+========================================= */
+
+.support-secondary-link {
+    margin: 35px 0 0;
+    color: #718096;
+    font-size: 13px;
+    text-align: center;
+}
+
+.support-secondary-link a {
+    color: #5145bd;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.support-secondary-link a:hover {
+    color: #bd913e;
+}
+
+
+/* =========================================
+   9. DARK MODE - HELP PAGE
+========================================= */
+
+html[data-theme="dark"] .support-page-body,
+html.dark .support-page-body,
+body.dark-mode.support-page-body,
+body.dark-mode {
+    background:
+        radial-gradient(ellipse at 5% 5%, rgba(79, 87, 200, 0.12), transparent 35%),
+        radial-gradient(ellipse at 95% 45%, rgba(117, 69, 194, 0.10), transparent 35%),
+        #090e1b;
+    color: #edf0ff;
+}
+
+html[data-theme="dark"] .support-hero,
+html.dark .support-hero,
+body.dark-mode .support-hero,
+[data-theme="dark"] .support-hero {
+    background:
+        radial-gradient(circle at 85% 15%, rgba(122, 100, 255, 0.35), transparent 32%),
+        radial-gradient(circle at 5% 100%, rgba(36, 135, 255, 0.22), transparent 40%),
+        linear-gradient(125deg, #090f26, #171d49 60%, #292052);
+    border-color: rgba(139, 132, 255, 0.30);
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(104, 99, 255, 0.18);
+}
+
+html[data-theme="dark"] .section-intro h2,
+html.dark .section-intro h2,
+body.dark-mode .section-intro h2,
+[data-theme="dark"] .section-intro h2 {
+    color: #edf0ff;
+}
+
+html[data-theme="dark"] .section-intro > p:not(.support-eyebrow),
+html.dark .section-intro > p:not(.support-eyebrow),
+body.dark-mode .section-intro > p:not(.support-eyebrow),
+[data-theme="dark"] .section-intro > p:not(.support-eyebrow) {
+    color: #a9b3cf;
+}
+
+html[data-theme="dark"] .help-card,
+html.dark .help-card,
+body.dark-mode .help-card,
+[data-theme="dark"] .help-card {
+    background: linear-gradient(145deg, #151d32, #11182a);
+    border-color: #293453;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+html[data-theme="dark"] .help-card:hover,
+html.dark .help-card:hover,
+body.dark-mode .help-card:hover,
+[data-theme="dark"] .help-card:hover {
+    border-color: #7770ef;
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.35),
+        0 0 22px rgba(116, 105, 255, 0.18);
+}
+
+html[data-theme="dark"] .help-card h3,
+html.dark .help-card h3,
+body.dark-mode .help-card h3,
+[data-theme="dark"] .help-card h3 {
+    color: #f0efff;
+}
+
+html[data-theme="dark"] .help-card p,
+html.dark .help-card p,
+body.dark-mode .help-card p,
+[data-theme="dark"] .help-card p {
+    color: #a8b2ca;
+}
+
+html[data-theme="dark"] .help-card-number,
+html.dark .help-card-number,
+body.dark-mode .help-card-number,
+[data-theme="dark"] .help-card-number {
+    color: #28304d;
+}
+
+html[data-theme="dark"] .help-card-icon,
+html.dark .help-card-icon,
+body.dark-mode .help-card-icon,
+[data-theme="dark"] .help-card-icon {
+    background: linear-gradient(135deg, #28244e, #252d55);
+    color: #aaa2ff;
+    box-shadow: 0 0 18px rgba(121, 108, 255, 0.14);
+}
+
+html[data-theme="dark"] .help-card a,
+html.dark .help-card a,
+body.dark-mode .help-card a,
+[data-theme="dark"] .help-card a {
+    color: #aaa5ff;
+}
+
+html[data-theme="dark"] .faq-section,
+html.dark .faq-section,
+body.dark-mode .faq-section,
+[data-theme="dark"] .faq-section {
+    background: linear-gradient(145deg, #131b2e, #101728);
+    border-color: #293451;
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(102, 93, 255, 0.06);
+}
+
+html[data-theme="dark"] .faq-item,
+html.dark .faq-item,
+body.dark-mode .faq-item,
+[data-theme="dark"] .faq-item {
+    background: #171f34;
+    border-color: #303b59;
+}
+
+html[data-theme="dark"] .faq-item:hover,
+html.dark .faq-item:hover,
+body.dark-mode .faq-item:hover,
+[data-theme="dark"] .faq-item:hover {
+    border-color: #7770e9;
+    box-shadow: 0 0 15px rgba(119, 112, 233, 0.12);
+}
+
+html[data-theme="dark"] .faq-item[open],
+html.dark .faq-item[open],
+body.dark-mode .faq-item[open],
+[data-theme="dark"] .faq-item[open] {
+    background: #202544;
+    border-color: #7770e9;
+}
+
+html[data-theme="dark"] .faq-item summary,
+html.dark .faq-item summary,
+body.dark-mode .faq-item summary,
+[data-theme="dark"] .faq-item summary {
+    color: #eeeaff;
+}
+
+html[data-theme="dark"] .faq-item summary::after,
+html.dark .faq-item summary::after,
+body.dark-mode .faq-item summary::after,
+[data-theme="dark"] .faq-item summary::after {
+    color: #b6a5ff;
+}
+
+html[data-theme="dark"] .faq-item p,
+html.dark .faq-item p,
+body.dark-mode .faq-item p,
+[data-theme="dark"] .faq-item p {
+    color: #aab5d0;
+    border-color: #394360;
+}
+
+html[data-theme="dark"] .contact-panel,
+html.dark .contact-panel,
+body.dark-mode .contact-panel,
+[data-theme="dark"] .contact-panel {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(122, 100, 255, 0.32), transparent 32%),
+        radial-gradient(circle at 5% 100%, rgba(36, 135, 255, 0.18), transparent 35%),
+        linear-gradient(125deg, #090f26, #171d49 60%, #292052);
+    border-color: rgba(139, 132, 255, 0.27);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(104, 99, 255, 0.16);
+}
+
+html[data-theme="dark"] .contact-copy > p:not(.support-eyebrow),
+html.dark .contact-copy > p:not(.support-eyebrow),
+body.dark-mode .contact-copy > p:not(.support-eyebrow),
+[data-theme="dark"] .contact-copy > p:not(.support-eyebrow) {
+    color: #b6c1dc;
+}
+
+html[data-theme="dark"] .contact-card,
+html.dark .contact-card,
+body.dark-mode .contact-card,
+[data-theme="dark"] .contact-card {
+    background: rgba(255, 255, 255, 0.055);
+    border-color: rgba(173, 177, 255, 0.17);
+}
+
+html[data-theme="dark"] .contact-card:hover,
+html.dark .contact-card:hover,
+body.dark-mode .contact-card:hover,
+[data-theme="dark"] .contact-card:hover {
+    background: rgba(132, 120, 255, 0.13);
+    border-color: #8179f5;
+    box-shadow: 0 0 22px rgba(145, 135, 255, 0.17);
+}
+
+html[data-theme="dark"] .contact-icon,
+html.dark .contact-icon,
+body.dark-mode .contact-icon,
+[data-theme="dark"] .contact-icon {
+    background: linear-gradient(135deg, #5145a5, #7661d8);
+    color: #ffffff;
+    box-shadow: 0 0 16px rgba(134, 114, 255, 0.30);
+}
+
+html[data-theme="dark"] .support-bottom,
+html.dark .support-bottom,
+body.dark-mode .support-bottom,
+[data-theme="dark"] .support-bottom {
+    background: linear-gradient(145deg, #151d32, #11182a);
+    border-color: #293451;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.22),
+        0 0 20px rgba(105, 95, 255, 0.06);
+}
+
+html[data-theme="dark"] .support-bottom h2,
+html.dark .support-bottom h2,
+body.dark-mode .support-bottom h2,
+[data-theme="dark"] .support-bottom h2 {
+    color: #f0efff;
+}
+
+html[data-theme="dark"] .support-bottom p,
+html.dark .support-bottom p,
+body.dark-mode .support-bottom p,
+[data-theme="dark"] .support-bottom p {
+    color: #a8b2ca;
+}
+
+html[data-theme="dark"] .bottom-icon,
+html.dark .bottom-icon,
+body.dark-mode .bottom-icon,
+[data-theme="dark"] .bottom-icon {
+    background: #30294a;
+    color: #ffd77c;
+    box-shadow: 0 0 20px rgba(255, 199, 94, 0.13);
+}
+
+html[data-theme="dark"] .support-bottom a,
+html.dark .support-bottom a,
+body.dark-mode .support-bottom a,
+[data-theme="dark"] .support-bottom a {
+    background: linear-gradient(135deg, #5145a5, #7661d8);
+    color: #ffffff;
+    box-shadow: 0 5px 20px rgba(113, 94, 225, 0.25);
+}
+
+html[data-theme="dark"] .support-secondary-link,
+html.dark .support-secondary-link,
+body.dark-mode .support-secondary-link,
+[data-theme="dark"] .support-secondary-link {
+    color: #a8b2ca;
+}
+
+html[data-theme="dark"] .support-secondary-link a,
+html.dark .support-secondary-link a,
+body.dark-mode .support-secondary-link a,
+[data-theme="dark"] .support-secondary-link a {
+    color: #aaa5ff;
+}
+
+
+/* =========================================
+   10. SMOOTH THEME TRANSITIONS
+========================================= */
+
+.support-main,
+.support-main .help-card,
+.support-main .faq-item,
+.support-main .faq-section,
+.support-main .support-bottom,
+.support-main .contact-card,
+.support-main .contact-panel,
+.support-main .help-card-icon,
+.support-main .support-btn {
+    transition:
+        background 0.35s ease,
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================
+   11. RESPONSIVE DESIGN - HELP PAGE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .support-hero {
+        padding: 50px 40px;
+    }
+
+    .hero-decoration {
+        flex-basis: 160px;
+    }
+
+    .hero-icon-circle {
+        width: 135px;
+        height: 135px;
+    }
+
+    .hero-icon-circle span {
+        font-size: 80px;
+    }
+
+    .hero-small-card {
+        right: -15px;
+        font-size: 10px;
+    }
+
+    .help-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .help-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .contact-panel {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .support-main {
+        width: 92%;
+        padding-top: 25px;
+    }
+
+    .support-hero {
+        min-height: auto;
+        padding: 40px 25px;
+        border-radius: 17px;
+    }
+
+    .support-hero h1 {
+        font-size: 36px;
+    }
+
+    .support-hero p:not(.support-eyebrow) {
+        font-size: 13px;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .support-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .help-section {
+        margin-top: 60px;
+    }
+
+    .help-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .help-card:last-child {
+        grid-column: auto;
+    }
+
+    .help-card p {
+        min-height: auto;
+    }
+
+    .faq-section {
+        padding: 27px 17px;
+        border-radius: 15px;
+    }
+
+    .faq-item {
+        padding: 17px;
+    }
+
+    .faq-item summary {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .contact-panel {
+        margin-top: 60px;
+        padding: 32px 20px;
+        border-radius: 17px;
+    }
+
+    .contact-card {
+        gap: 11px;
+        padding: 14px 11px;
+    }
+
+    .contact-icon {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+
+    .contact-details strong {
+        font-size: 12px;
+    }
+
+    .contact-details small {
+        font-size: 10px;
+    }
+
+    .support-bottom {
+        margin-top: 60px;
+        padding: 40px 18px;
+    }
+}
+
+
+/* =========================================
+   12. LIGHT MODE TEXT VISIBILITY FIX
+========================================= */
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .support-hero {
+    color: #ffffff !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .support-hero h1 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .support-hero h1 span {
+    color: #ffe09a !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .support-hero p:not(.support-eyebrow) {
+    color: #e8efff !important;
+    opacity: 1 !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .support-hero .support-eyebrow {
+    color: #ffd77c !important;
+    opacity: 1 !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-panel {
+    color: #ffffff !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-copy h2 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-copy h2 span {
+    color: #ffe09a !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-copy p:not(.support-eyebrow) {
+    color: #e8efff !important;
+    opacity: 1 !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-copy .support-eyebrow {
+    color: #ffd77c !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-card {
+    background: rgba(255, 255, 255, 0.10) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-card small,
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-details small {
+    color: #dce7f8 !important;
+    opacity: 1 !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-card strong,
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-details strong {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-arrow {
+    color: #ffd77c !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .contact-note {
+    color: #ffe09a !important;
+}
+
+html:not([data-theme="dark"]):not(.dark) body.support-page-body:not(.dark-mode) .secondary-btn {
+    color: #ffffff !important;
+    border-color: rgba(255,255,255,0.55) !important;
+}
+
+
+/* =========================================
+   13. ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .support-main *,
+    .support-main *::before,
+    .support-main *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================
+   14. FEEDBACK PAGE - LIGHT MODE
+========================================= */
+
+.feedback-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-bottom: 65px;
+}
+
+/* Feedback hero */
+
+.feedback-page .feedback-hero {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    min-height: auto;
+    padding: 65px 55px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(119, 112, 255, 0.35), transparent 30%),
+        radial-gradient(circle at 10% 100%, rgba(35, 145, 255, 0.20), transparent 40%),
+        linear-gradient(125deg, #101c45, #263b83 55%, #493c91);
+    color: #ffffff !important;
+    box-shadow:
+        0 18px 45px rgba(55, 78, 170, 0.20),
+        0 0 35px rgba(104, 111, 255, 0.16);
+}
+
+.feedback-page .feedback-hero::before,
+.feedback-page .feedback-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.feedback-page .feedback-hero::before {
+    width: 230px;
+    height: 230px;
+    right: -65px;
+    top: -85px;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.feedback-page .feedback-hero::after {
+    width: 150px;
+    height: 150px;
+    right: 115px;
+    bottom: -100px;
+    background: rgba(255, 213, 110, 0.13);
+}
+
+.feedback-page .feedback-hero .support-eyebrow {
+    position: relative;
+    z-index: 1;
+    color: #ffdc85 !important;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.feedback-page .feedback-hero h1 {
+    position: relative;
+    z-index: 1;
+    color: #ffffff !important;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+    font-weight: 800;
+    max-width: 700px;
+}
+
+.feedback-page .feedback-hero h1 span {
+    color: #ffd36e !important;
+    text-shadow: 0 0 18px rgba(255, 215, 124, 0.30);
+}
+
+.feedback-page .feedback-hero > p:not(.support-eyebrow) {
+    position: relative;
+    z-index: 1;
+    color: #edf1ff !important;
+    line-height: 1.8;
+    max-width: 680px;
+}
+
+.feedback-hero-note {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 18px;
+    padding: 11px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.feedback-hero-note span {
+    color: #ffdb77;
+    font-size: 17px;
+}
+
+
+/* Feedback card */
+
+.feedback-page .feedback-card {
+    max-width: 790px;
+    margin: 45px auto 35px;
+    padding: 38px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #ffffff, #f8f9ff);
+    border: 1px solid #e5e9f5;
+    box-shadow:
+        0 15px 45px rgba(38, 55, 110, 0.09),
+        0 0 25px rgba(116, 126, 255, 0.05);
+    color: #202b45;
+}
+
+.feedback-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 32px;
+}
+
+.feedback-heading-icon {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 17px;
+    background: linear-gradient(135deg, #fff2c9, #ffe09a);
+    color: #a66a00;
+    font-size: 25px;
+    box-shadow: 0 7px 18px rgba(215, 159, 42, 0.14);
+}
+
+.feedback-card-kicker {
+    margin: 0 0 5px;
+    color: #9b720e;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.feedback-card-heading h2 {
+    margin: 0 0 7px;
+    color: #202b45;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.feedback-card-heading > div:last-child > p:last-child {
+    margin: 0;
+    color: #68738b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Feedback form */
+
+.feedback-page .feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.feedback-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feedback-page .support-label {
+    display: block;
+    margin: 0;
+    color: #27334f !important;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.required-star {
+    color: #dc4b55;
+}
+
+.optional-label {
+    display: inline-block;
+    margin-left: 7px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background: #edf1fa;
+    color: #64708a;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    vertical-align: middle;
+}
+
+
+/* Form controls */
+
+.feedback-page .support-control {
+    width: 100%;
+    min-height: 49px;
+    padding: 13px 15px;
+    border: 1px solid #dce2ef;
+    border-radius: 12px;
+    background: #f9faff;
+    color: #26334f !important;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.feedback-page .support-control::placeholder {
+    color: #8993a8 !important;
+    opacity: 1;
+}
+
+.feedback-page .support-control:focus {
+    border-color: #6179e8;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(97, 121, 232, 0.13);
+}
+
+.feedback-page select.support-control {
+    cursor: pointer;
+}
+
+.feedback-page .feedback-message {
+    min-height: 145px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.feedback-page .field-hint {
+    margin: -3px 0 0;
+    color: #78839a !important;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GOLDEN RATING STARS - NO BOX
+========================================= */
+
+.feedback-page .rating-field {
+    margin: 0;
+    padding: 22px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.feedback-page .rating-field legend {
+    padding: 0 7px;
+    color: #29344f !important;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.feedback-page .rating-description {
+    margin: 2px 0 14px;
+    color: #737d91 !important;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.feedback-page .rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 9px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.feedback-page .rating-stars input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.feedback-page .rating-stars label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #c9c9c9;
+    font-size: 32px;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover and selected stars */
+
+.feedback-page .rating-stars label:hover,
+.feedback-page .rating-stars label:hover ~ label,
+.feedback-page .rating-stars input:checked ~ label {
+    color: #f4b82e !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.feedback-page .rating-stars label:hover {
+    transform: translateY(-3px) scale(1.06);
+}
+
+/* Keyboard accessibility */
+
+.feedback-page .rating-stars input:focus-visible + label {
+    outline: 2px solid #647ce8;
+    outline-offset: 4px;
+    border-radius: 4px !important;
+}
+
+.feedback-page .rating-hint {
+    margin: 12px 0 0;
+    color: #98721c !important;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Submit button */
+
+.feedback-page .feedback-submit-button {
+    width: 100%;
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: none;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #344da9, #6279e8);
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 9px 20px rgba(66, 88, 180, 0.20);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-page .feedback-submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 13px 25px rgba(66, 88, 180, 0.28);
+}
+
+.feedback-page .feedback-submit-button span:last-child {
+    font-size: 20px;
+}
+
+.feedback-page .feedback-privacy-note {
+    margin: -10px 0 0;
+    text-align: center;
+    color: #78839a !important;
+    font-size: 12px;
+}
+
+
+/* Error alert */
+
+.feedback-page .support-alert {
+    margin-bottom: 25px;
+    padding: 17px 20px;
+    border: 1px solid #f2b9bd;
+    border-radius: 13px;
+    background: #fff1f1;
+    color: #852d35 !important;
+}
+
+.feedback-page .support-alert strong,
+.feedback-page .support-alert li,
+.feedback-page .support-alert-hint {
+    color: #852d35 !important;
+}
+
+.feedback-page .support-alert ul {
+    padding-left: 21px;
+}
+
+.feedback-page .support-alert-hint {
+    font-size: 12px;
+}
+
+
+/* Success dialog */
+
+.feedback-dialog {
+    width: min(430px, calc(100% - 32px));
+    padding: 35px 30px;
+    border: 1px solid #e7eaf3;
+    border-radius: 24px;
+    background: #ffffff;
+    color: #26334f;
+    text-align: center;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.22);
+}
+
+.feedback-dialog::backdrop {
+    background: rgba(15, 23, 50, 0.62);
+    backdrop-filter: blur(5px);
+}
+
+.feedback-dialog .dialog-check {
+    display: grid;
+    place-items: center;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 17px;
+    border-radius: 50%;
+    background: #e5f8eb;
+    color: #239a52;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.feedback-dialog .dialog-kicker {
+    margin: 0 0 8px;
+    color: #a47a19;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.feedback-dialog h2 {
+    margin: 0 0 12px;
+    color: #25314c;
+    font-size: 25px;
+}
+
+.feedback-dialog p:not(.dialog-kicker) {
+    margin: 0 0 22px;
+    color: #68738b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.feedback-dialog .support-button {
+    min-width: 130px;
+    border: none;
+    border-radius: 11px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #344da9, #6279e8);
+    color: #ffffff;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   15. FEEDBACK PAGE - DARK MODE
+========================================= */
+
+html[data-theme="dark"] .feedback-page .feedback-card,
+html.dark .feedback-page .feedback-card,
+body.dark-mode .feedback-page .feedback-card,
+[data-theme="dark"] .feedback-page .feedback-card {
+    background: linear-gradient(145deg, #171e31, #111827);
+    border-color: #303b56;
+    color: #edf1ff;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="dark"] .feedback-page .feedback-hero,
+html.dark .feedback-page .feedback-hero,
+body.dark-mode .feedback-page .feedback-hero,
+[data-theme="dark"] .feedback-page .feedback-hero {
+    background:
+        radial-gradient(circle at 85% 15%, rgba(122, 100, 255, 0.35), transparent 32%),
+        radial-gradient(circle at 5% 100%, rgba(36, 135, 255, 0.22), transparent 40%),
+        linear-gradient(125deg, #090f26, #171d49 60%, #292052);
+    border-color: rgba(139, 132, 255, 0.30);
+}
+
+html[data-theme="dark"] .feedback-card-heading h2,
+html.dark .feedback-card-heading h2,
+body.dark-mode .feedback-card-heading h2,
+[data-theme="dark"] .feedback-card-heading h2 {
+    color: #f4f6ff;
+}
+
+html[data-theme="dark"] .feedback-card-heading > div:last-child > p:last-child,
+html.dark .feedback-card-heading > div:last-child > p:last-child,
+body.dark-mode .feedback-card-heading > div:last-child > p:last-child,
+[data-theme="dark"] .feedback-card-heading > div:last-child > p:last-child {
+    color: #b9c4dc;
+}
+
+html[data-theme="dark"] .feedback-card-kicker,
+html.dark .feedback-card-kicker,
+body.dark-mode .feedback-card-kicker,
+[data-theme="dark"] .feedback-card-kicker {
+    color: #f2cb70;
+}
+
+html[data-theme="dark"] .feedback-page .support-label,
+html.dark .feedback-page .support-label,
+body.dark-mode .feedback-page .support-label,
+[data-theme="dark"] .feedback-page .support-label {
+    color: #e9edfa !important;
+}
+
+html[data-theme="dark"] .feedback-page .support-control,
+html.dark .feedback-page .support-control,
+body.dark-mode .feedback-page .support-control,
+[data-theme="dark"] .feedback-page .support-control {
+    background: #202a40;
+    border-color: #3b4966;
+    color: #f1f4ff !important;
+}
+
+html[data-theme="dark"] .feedback-page .support-control::placeholder,
+html.dark .feedback-page .support-control::placeholder,
+body.dark-mode .feedback-page .support-control::placeholder,
+[data-theme="dark"] .feedback-page .support-control::placeholder {
+    color: #aab6ce !important;
+}
+
+html[data-theme="dark"] .feedback-page .support-control:focus,
+html.dark .feedback-page .support-control:focus,
+body.dark-mode .feedback-page .support-control:focus,
+[data-theme="dark"] .feedback-page .support-control:focus {
+    background: #26324b;
+    border-color: #8196ff;
+    box-shadow: 0 0 0 4px rgba(129, 150, 255, 0.14);
+}
+
+
+/* Dark mode rating field - no box */
+
+html[data-theme="dark"] .feedback-page .rating-field,
+html.dark .feedback-page .rating-field,
+body.dark-mode .feedback-page .rating-field,
+[data-theme="dark"] .feedback-page .rating-field {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="dark"] .feedback-page .rating-field legend,
+html.dark .feedback-page .rating-field legend,
+body.dark-mode .feedback-page .rating-field legend,
+[data-theme="dark"] .feedback-page .rating-field legend {
+    color: #f4f0e4 !important;
+}
+
+html[data-theme="dark"] .feedback-page .rating-description,
+html.dark .feedback-page .rating-description,
+body.dark-mode .feedback-page .rating-description,
+[data-theme="dark"] .feedback-page .rating-description {
+    color: #c1c8d8 !important;
+}
+
+/* Dark mode stars remain transparent */
+
+html[data-theme="dark"] .feedback-page .rating-stars label,
+html.dark .feedback-page .rating-stars label,
+body.dark-mode .feedback-page .rating-stars label,
+[data-theme="dark"] .feedback-page .rating-stars label {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #858b99;
+}
+
+/* Golden selected and hovered stars in dark mode */
+
+html[data-theme="dark"] .feedback-page .rating-stars label:hover,
+html.dark .feedback-page .rating-stars label:hover,
+body.dark-mode .feedback-page .rating-stars label:hover,
+[data-theme="dark"] .feedback-page .rating-stars label:hover,
+html[data-theme="dark"] .feedback-page .rating-stars label:hover ~ label,
+html.dark .feedback-page .rating-stars label:hover ~ label,
+body.dark-mode .feedback-page .rating-stars label:hover ~ label,
+[data-theme="dark"] .feedback-page .rating-stars label:hover ~ label,
+html[data-theme="dark"] .feedback-page .rating-stars input:checked ~ label,
+html.dark .feedback-page .rating-stars input:checked ~ label,
+body.dark-mode .feedback-page .rating-stars input:checked ~ label,
+[data-theme="dark"] .feedback-page .rating-stars input:checked ~ label {
+    color: #ffd05b !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="dark"] .feedback-page .rating-hint,
+html.dark .feedback-page .rating-hint,
+body.dark-mode .feedback-page .rating-hint,
+[data-theme="dark"] .feedback-page .rating-hint {
+    color: #f0cc75 !important;
+}
+
+html[data-theme="dark"] .feedback-page .field-hint,
+html.dark .feedback-page .field-hint,
+body.dark-mode .feedback-page .field-hint,
+[data-theme="dark"] .feedback-page .field-hint {
+    color: #aebbd3 !important;
+}
+
+html[data-theme="dark"] .feedback-page .optional-label,
+html.dark .feedback-page .optional-label,
+body.dark-mode .feedback-page .optional-label,
+[data-theme="dark"] .feedback-page .optional-label {
+    background: #303b54;
+    color: #c8d1e5;
+}
+
+html[data-theme="dark"] .feedback-page .feedback-privacy-note,
+html.dark .feedback-page .feedback-privacy-note,
+body.dark-mode .feedback-page .feedback-privacy-note,
+[data-theme="dark"] .feedback-page .feedback-privacy-note {
+    color: #aebbd3 !important;
+}
+
+html[data-theme="dark"] .feedback-page .support-secondary-link,
+html.dark .feedback-page .support-secondary-link,
+body.dark-mode .feedback-page .support-secondary-link,
+[data-theme="dark"] .feedback-page .support-secondary-link {
+    color: #bdc7dc;
+}
+
+html[data-theme="dark"] .feedback-page .support-secondary-link a,
+html.dark .feedback-page .support-secondary-link a,
+body.dark-mode .feedback-page .support-secondary-link a,
+[data-theme="dark"] .feedback-page .support-secondary-link a {
+    color: #a9b9ff;
+}
+
+html[data-theme="dark"] .feedback-page .support-alert,
+html.dark .feedback-page .support-alert,
+body.dark-mode .feedback-page .support-alert,
+[data-theme="dark"] .feedback-page .support-alert {
+    background: #3a222b;
+    border-color: #75404a;
+    color: #ffe1e3 !important;
+}
+
+html[data-theme="dark"] .feedback-page .support-alert strong,
+html.dark .feedback-page .support-alert strong,
+body.dark-mode .feedback-page .support-alert strong,
+[data-theme="dark"] .feedback-page .support-alert strong,
+html[data-theme="dark"] .feedback-page .support-alert li,
+html.dark .feedback-page .support-alert li,
+body.dark-mode .feedback-page .support-alert li,
+[data-theme="dark"] .feedback-page .support-alert li,
+html[data-theme="dark"] .feedback-page .support-alert-hint,
+html.dark .feedback-page .support-alert-hint,
+body.dark-mode .feedback-page .support-alert-hint,
+[data-theme="dark"] .feedback-page .support-alert-hint {
+    color: #ffe1e3 !important;
+}
+
+/* =========================================
+   DARK MODE - SUCCESS DIALOG
+========================================= */
+
+html[data-theme="dark"] .feedback-dialog,
+html.dark .feedback-dialog,
+body.dark-mode .feedback-dialog,
+[data-theme="dark"] .feedback-dialog {
+    background: #1b2438;
+    border-color: #394660;
+    color: #f1f4ff;
+}
+
+html[data-theme="dark"] .feedback-dialog h2,
+html.dark .feedback-dialog h2,
+body.dark-mode .feedback-dialog h2,
+[data-theme="dark"] .feedback-dialog h2 {
+    color: #f4f6ff;
+}
+
+html[data-theme="dark"] .feedback-dialog p:not(.dialog-kicker),
+html.dark .feedback-dialog p:not(.dialog-kicker),
+body.dark-mode .feedback-dialog p:not(.dialog-kicker),
+[data-theme="dark"] .feedback-dialog p:not(.dialog-kicker) {
+    color: #c0cbe0;
+}
+
+
+/* =========================================
+   16. FEEDBACK PAGE - RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .feedback-page .feedback-hero {
+        padding: 42px 25px;
+        border-radius: 21px;
+    }
+
+    .feedback-page .feedback-card {
+        margin: 30px auto;
+        padding: 25px 19px;
+        border-radius: 19px;
+    }
+
+    .feedback-card-heading {
+        align-items: flex-start;
+        gap: 13px;
+    }
+
+    .feedback-heading-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 13px;
+    }
+
+    .feedback-card-heading h2 {
+        font-size: 21px;
+    }
+
+    .feedback-page .rating-field {
+        padding: 17px 13px;
+    }
+
+    .feedback-page .rating-stars {
+        gap: 7px;
+    }
+
+    .feedback-page .rating-stars label {
+        width: 42px;
+        height: 42px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .feedback-page .rating-stars {
+        gap: 5px;
+    }
+
+    .feedback-page .rating-stars label {
+        width: 37px;
+        height: 37px;
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================
+   17. REDUCED MOTION - FEEDBACK PAGE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .feedback-page *,
+    .feedback-page *::before,
+    .feedback-page *::after,
+    .feedback-dialog * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================
+   18. FEEDBACK FORM - PREMIUM ENHANCEMENTS
+   Only affects the Feedback Page
+========================================= */
+
+/* Premium feedback card */
+
+.feedback-page .feedback-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.feedback-page .feedback-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #344da9, #8c78ed, #f4bd55);
+}
+
+.feedback-page .feedback-card-heading {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #e9edf6;
+}
+
+.feedback-page .feedback-heading-icon {
+    background: linear-gradient(135deg, #fff0bd, #ffd778);
+    box-shadow: 0 7px 22px rgba(215, 159, 42, 0.20);
+}
+
+
+/* Improved form spacing */
+
+.feedback-page .feedback-form {
+    gap: 27px;
+}
+
+.feedback-page .feedback-form-group {
+    gap: 11px;
+}
+
+.feedback-page .support-label {
+    letter-spacing: 0.1px;
+}
+
+
+/* Improved input fields */
+
+.feedback-page .support-control {
+    box-sizing: border-box;
+    min-height: 53px;
+    padding: 14px 17px;
+    border: 1px solid #dce3f1;
+    border-radius: 13px;
+    background: #f8faff;
+    box-shadow: 0 2px 7px rgba(35, 54, 100, 0.025);
+}
+
+.feedback-page .support-control:hover {
+    border-color: #aebbe8;
+}
+
+.feedback-page .support-control:focus {
+    border-color: #6179e8;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(97, 121, 232, 0.13);
+}
+
+.feedback-page select.support-control {
+    appearance: auto;
+}
+
+.feedback-page .feedback-message {
+    min-height: 165px;
+    padding: 16px 17px;
+    line-height: 1.8;
+}
+
+
+/* Rating feedback text */
+
+.feedback-page .rating-feedback {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 32px;
+    margin-top: 9px;
+    color: #a97917;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.feedback-page .rating-feedback-icon {
+    color: #f4b82e;
+    font-size: 18px;
+}
+
+.feedback-page .rating-hint {
+    margin-top: 5px;
+}
+
+
+/* Category guidance */
+
+.feedback-page .category-guidance {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #e6e9fa;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #f5f6ff, #faf9ff);
+    color: #66718c;
+    font-size: 12px;
+    line-height: 1.7;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.feedback-page .category-guidance-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+}
+
+
+/* Message counter */
+
+.feedback-page .message-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.feedback-page .message-meta .field-hint {
+    flex: 1;
+    margin: 0;
+}
+
+.feedback-page .character-counter {
+    margin: 0;
+    color: #7c879d;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.feedback-page .character-counter.is-near-limit {
+    color: #c58a24;
+}
+
+.feedback-page .character-counter.is-at-limit {
+    color: #dc4b55;
+}
+
+
+/* Premium submit button */
+
+.feedback-page .feedback-submit-button {
+    position: relative;
+    overflow: hidden;
+    min-height: 56px;
+    margin-top: 5px;
+    border-radius: 14px;
+    background: linear-gradient(110deg, #293f91, #536bd4 55%, #7868d8);
+    box-shadow:
+        0 9px 22px rgba(66, 88, 180, 0.22),
+        0 2px 5px rgba(40, 55, 120, 0.10);
+}
+
+.feedback-page .feedback-submit-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        100deg,
+        transparent,
+        rgba(255, 255, 255, 0.20),
+        transparent
+    );
+    transition: left 0.55s ease;
+}
+
+.feedback-page .feedback-submit-button:hover::before {
+    left: 130%;
+}
+
+.feedback-page .feedback-submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 14px 28px rgba(66, 88, 180, 0.30),
+        0 0 18px rgba(116, 126, 255, 0.12);
+}
+
+.feedback-page .feedback-submit-button:active {
+    transform: translateY(-1px);
+}
+
+.feedback-page .feedback-submit-button:focus-visible {
+    outline: 3px solid rgba(97, 121, 232, 0.35);
+    outline-offset: 4px;
+}
+
+.feedback-page .feedback-submit-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.78;
+    transform: none;
+}
+
+
+/* Loading spinner */
+
+.feedback-page .submit-spinner {
+    display: none;
+    width: 17px;
+    height: 17px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: feedback-spin 0.7s linear infinite;
+}
+
+.feedback-page .feedback-submit-button.is-submitting .submit-spinner {
+    display: inline-block;
+}
+
+.feedback-page .feedback-submit-button.is-submitting .submit-button-arrow {
+    display: none;
+}
+
+@keyframes feedback-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Improved privacy note */
+
+.feedback-page .feedback-privacy-note {
+    padding-top: 5px;
+    line-height: 1.7;
+}
+
+
+/* Dark mode enhancements */
+
+html[data-theme="dark"] .feedback-page .feedback-card,
+html.dark .feedback-page .feedback-card,
+body.dark-mode .feedback-page .feedback-card,
+[data-theme="dark"] .feedback-page .feedback-card {
+    background: linear-gradient(145deg, #171e31, #111827);
+    border-color: #303b56;
+}
+
+html[data-theme="dark"] .feedback-page .feedback-card-heading,
+html.dark .feedback-page .feedback-card-heading,
+body.dark-mode .feedback-page .feedback-card-heading,
+[data-theme="dark"] .feedback-page .feedback-card-heading {
+    border-bottom-color: #303b56;
+}
+
+html[data-theme="dark"] .feedback-page .support-control,
+html.dark .feedback-page .support-control,
+body.dark-mode .feedback-page .support-control,
+[data-theme="dark"] .feedback-page .support-control {
+    background: #202a40;
+    border-color: #3b4966;
+    color: #f1f4ff !important;
+}
+
+html[data-theme="dark"] .feedback-page .support-control:hover,
+html.dark .feedback-page .support-control:hover,
+body.dark-mode .feedback-page .support-control:hover,
+[data-theme="dark"] .feedback-page .support-control:hover {
+    border-color: #6679b2;
+}
+
+html[data-theme="dark"] .feedback-page .support-control:focus,
+html.dark .feedback-page .support-control:focus,
+body.dark-mode .feedback-page .support-control:focus,
+[data-theme="dark"] .feedback-page .support-control:focus {
+    background: #26324b;
+    border-color: #8196ff;
+}
+
+html[data-theme="dark"] .feedback-page .category-guidance,
+html.dark .feedback-page .category-guidance,
+body.dark-mode .feedback-page .category-guidance,
+[data-theme="dark"] .feedback-page .category-guidance {
+    background: linear-gradient(135deg, #202942, #25233d);
+    border-color: #3c4666;
+    color: #c1cbe0;
+}
+
+html[data-theme="dark"] .feedback-page .rating-feedback,
+html.dark .feedback-page .rating-feedback,
+body.dark-mode .feedback-page .rating-feedback,
+[data-theme="dark"] .feedback-page .rating-feedback {
+    color: #f4cd76;
+}
+
+html[data-theme="dark"] .feedback-page .character-counter,
+html.dark .feedback-page .character-counter,
+body.dark-mode .feedback-page .character-counter,
+[data-theme="dark"] .feedback-page .character-counter {
+    color: #aebbd3;
+}
+
+html[data-theme="dark"] .feedback-page .character-counter.is-near-limit,
+html.dark .feedback-page .character-counter.is-near-limit,
+body.dark-mode .feedback-page .character-counter.is-near-limit,
+[data-theme="dark"] .feedback-page .character-counter.is-near-limit {
+    color: #f0c36a;
+}
+
+html[data-theme="dark"] .feedback-page .character-counter.is-at-limit,
+html.dark .feedback-page .character-counter.is-at-limit,
+body.dark-mode .feedback-page .character-counter.is-at-limit,
+[data-theme="dark"] .feedback-page .character-counter.is-at-limit {
+    color: #ff929b;
+}
+
+html[data-theme="dark"] .feedback-page .feedback-submit-button,
+html.dark .feedback-page .feedback-submit-button,
+body.dark-mode .feedback-page .feedback-submit-button,
+[data-theme="dark"] .feedback-page .feedback-submit-button {
+    background: linear-gradient(110deg, #414eaa, #5b6fce 55%, #7868d8);
+}
+
+
+/* Responsive enhancements */
+
+@media (max-width: 600px) {
+
+    .feedback-page .feedback-card-heading {
+        padding-bottom: 19px;
+    }
+
+    .feedback-page .feedback-form {
+        gap: 23px;
+    }
+
+    .feedback-page .support-control {
+        min-height: 50px;
+        font-size: 13px;
+    }
+
+    .feedback-page .feedback-message {
+        min-height: 145px;
+    }
+
+    .feedback-page .message-meta {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .feedback-page .character-counter {
+        align-self: flex-end;
+    }
+
+    .feedback-page .feedback-submit-button {
+        min-height: 53px;
+    }
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .feedback-page .feedback-card,
+    .feedback-page .category-guidance,
+    .feedback-page .feedback-submit-button,
+    .feedback-page .feedback-submit-button::before,
+    .feedback-page .submit-spinner {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================
+   19. FEEDBACK SUCCESS POPUP ANIMATION
+========================================= */
+
+.feedback-page .feedback-success-dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.55);
+
+    animation: feedbackOverlayFade 0.3s ease forwards;
+}
+
+.feedback-page .feedback-success-dialog .dialog-content {
+    animation: feedbackPopupDrop 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    transform-origin: top center;
+}
+
+@keyframes feedbackOverlayFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes feedbackPopupDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.9);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(10px) scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .feedback-page .feedback-success-dialog,
+    .feedback-page .feedback-success-dialog .dialog-content {
+        animation: none;
+    }
+}
